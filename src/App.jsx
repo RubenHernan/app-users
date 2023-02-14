@@ -70,7 +70,7 @@ const handleModalHidden = () =>{
 
   return (
     <div className="App">
-      <div className='container__header'>
+      <div className='container__header' style={{backgroundImage: "url(./fundo-azul.jpg)"}}>
         <div className='header'>
         <div className='header__logo'>
            <span>ADMIN</span>
