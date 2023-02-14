@@ -1,0 +1,147 @@
+
+.container__header{
+    background-image: url("./fundo-azul.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+.header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    color: var(--color-white);
+    z-index: var(--z-index-navbar);
+}
+
+.header__logo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.header__logo::after{
+    right: -20px;
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: var(--color-white);
+}
+
+.header__logo span{
+    font-size: 25px;
+}
+
+.btn__create{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background-color: var(--color-dark-ligth);
+    color: var(--color-white);
+
+}
+
+.btn__create:hover{
+    box-shadow: var(--color-ligth) 2px 2px 1px;
+    /* transform: translate(-2px,-2px); */
+
+}
+
+.header__cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+}
+
+.card__total{
+    display: flex;
+    width: 100px;
+    color: var(--color-ligth);
+    font-size: 13px;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    background-color: var(--color-dark-ligth);
+    box-shadow: var(--color-ligth) 3.5px 3.5px 2px;
+}
+
+.card__total h1{
+    font-size: 13px;
+    color: var(--color-white);
+}
+.cards{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.3rem;
+    padding: 2rem;
+}
+
+
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 90vh;
+    backdrop-filter:  blur(2px) ;
+    z-index: var(--z-index-modal);
+    transition: left 0.3s;
+    left: 0;
+}
+
+.alert__modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 90vh;
+    backdrop-filter:  blur(1px) ;
+    z-index: var(--z-index-alert);
+    transition: left 0.2s;
+    left: 0;
+    transform: scale(1);
+    transition: transform 0.2s;
+}
+
+.hidden{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.modal--hidden{
+    left: -150%;
+}
+
+.alert--hidden{
+    transform: scale(0);
+}
+
+@media (min-width: 400px) {
+    
+    
+.card__total{
+    width: 145px;
+    color: var(--color-ligth);
+    padding: 1rem;
+    flex-direction: column;
+}
+
+.card__total h1{
+    font-size: 25px;
+}
+
+}
+
